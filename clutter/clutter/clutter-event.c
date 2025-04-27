@@ -587,10 +587,10 @@ clutter_event_get_scroll_delta (const ClutterEvent *event,
   g_return_if_fail (event->scroll.direction == CLUTTER_SCROLL_SMOOTH);
 
   if (dx != NULL)
-    *dx = event->scroll.delta_x;
+    *dx = event->scroll.delta_x * 0.32;
 
   if (dy != NULL)
-    *dy = event->scroll.delta_y;
+    *dy = event->scroll.delta_y * 0.32;
 }
 
 /**
